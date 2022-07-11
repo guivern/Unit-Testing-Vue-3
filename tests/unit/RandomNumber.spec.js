@@ -12,7 +12,7 @@ describe('RandomNumber', () => {
     await wrapper.find('button').trigger('click')
     const randomNumber = parseInt(wrapper.find('span').text())
     expect(randomNumber).toBeGreaterThanOrEqual(1)
-    expect(randomNumber).toBeLessThan(10)
+    expect(randomNumber).toBeLessThanOrEqual(10)
   })
 
   test('randomNumber data value should be between 100 and 200', async () => {
@@ -25,6 +25,6 @@ describe('RandomNumber', () => {
     await wrapper.find('button').trigger('click')
     const randomNumber = parseInt(wrapper.find('span').text())
     expect(randomNumber).toBeGreaterThan(100)
-    expect(randomNumber).toBeLessThan(200)
+    expect(randomNumber).toBeLessThanOrEqual(200)
   })
 })
