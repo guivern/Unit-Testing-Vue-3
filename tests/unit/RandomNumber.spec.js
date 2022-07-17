@@ -24,7 +24,7 @@ describe('RandomNumber', () => {
     })
     await wrapper.find('button').trigger('click')
     const randomNumber = parseInt(wrapper.find('span').text())
-    expect(randomNumber).toBeGreaterThan(100)
+    expect(randomNumber).toBeGreaterThanOrEqual(100)
     expect(randomNumber).toBeLessThanOrEqual(200)
   })
 })
